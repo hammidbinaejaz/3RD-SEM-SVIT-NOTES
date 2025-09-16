@@ -1,169 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3rd Semester Downloads – SVIT / VTU</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3rd Semester Notes – SVIT / VTU</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <!-- VanillaTilt.js -->
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
 
   <style>
-    /* Dark Mode */
-    body.dark-mode {
-      background-color: #1a1a1a;
-      color: #f0f0f0;
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
     }
-    body.dark-mode a {
-      color: #90cdf4;
-    }
+    a { text-decoration: none; color: inherit; }
+    header { background: linear-gradient(135deg, #3498db, #2980b9); color: #fff; padding: 30px 20px; text-align: center; }
+    .header-actions { margin-top: 15px; display: flex; justify-content: center; gap: 10px; }
+    .search-bar { transition: width 0.3s ease, box-shadow 0.3s ease; width: 180px; padding: 6px 10px; border-radius: 20px; border: 1px solid #ccc; }
+    .search-bar:focus { width: 250px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); outline: none; border-color: #fff; }
+    #darkModeToggle { cursor: pointer; transition: transform 0.2s ease; padding: 6px 10px; border-radius: 50%; border: none; background-color: #fff; color: #3498db; }
+    #darkModeToggle:hover { transform: scale(1.2); background-color: #2980b9; color: #fff; }
 
-    /* Flip card effect */
-    .flip-card {
-      perspective: 1000px;
-    }
-    .flip-card-inner {
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-      position: relative;
-    }
-    .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-    .flip-card-front, .flip-card-back {
-      backface-visibility: hidden;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 12px;
-    }
-    .flip-card-back {
-      transform: rotateY(180deg);
-    }
+    main { padding: 30px 20px; }
+    .subjects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+
+    .card { background-color: #fff; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
+    .card i { color: #3498db; margin-bottom: 10px; }
+    .card h2 { margin-bottom: 10px; font-size: 1.4rem; color: #222; }
+
+    .pdf-list { flex-grow: 1; max-height: 250px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; }
+    .pdf-box { display: flex; align-items: center; gap: 5px; background-color: #3498db; color: #fff; padding: 6px 10px; border-radius: 8px; font-size: 0.9rem; transition: background-color 0.3s, transform 0.2s; }
+    .pdf-box:hover { background-color: #2980b9; transform: translateY(-2px); }
+    .pdf-box i { font-size: 1rem; }
+
+    .btn { display: inline-block; background-color: #2ecc71; color: #fff; padding: 8px 16px; border-radius: 25px; transition: background-color 0.3s, transform 0.2s; font-weight: 500; text-align: center; }
+    .btn:hover { background-color: #27ae60; transform: translateY(-2px); }
+
+    footer { text-align: center; padding: 12px 0; font-size: 0.8rem; color: #888; background-color: #f0f0f0; }
+
+    body.dark-mode { background-color: #111; color: #eee; }
+    body.dark-mode a { color: #90cdf4; }
+    body.dark-mode .card { background-color: #2c2c2c; box-shadow: 0 8px 20px rgba(0,0,0,0.5); }
+    body.dark-mode .pdf-box { background-color: #2980b9; color: #fff; }
+    body.dark-mode .pdf-box:hover { background-color: #3498db; }
+    body.dark-mode .btn { background-color: #27ae60; }
+    body.dark-mode .btn:hover { background-color: #2ecc71; }
+    body.dark-mode header { background: linear-gradient(135deg, #2980b9, #3498db); }
+    body.dark-mode #darkModeToggle { background-color: #fff; color: #3498db; }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-800 transition-colors duration-300">
+<body>
 
   <!-- Header -->
-  <header class="bg-blue-600 text-white py-6">
-    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
-      <h1 class="text-2xl font-bold mb-2 md:mb-0">3rd Semester Notes – SVIT / VTU</h1>
-      <div class="flex gap-2 items-center">
-        <input type="text" id="searchInput" placeholder="Search notes..." class="px-3 py-2 rounded-md text-gray-800" />
-        <button id="darkModeToggle" class="px-3 py-2 rounded-md bg-gray-200 text-gray-800 hover:bg-gray-300">🌙</button>
-      </div>
+  <header>
+    <h1>3rd Semester Notes – SVIT / VTU</h1>
+    <div class="header-actions">
+      <input type="text" id="searchInput" placeholder="Search notes..." class="search-bar">
+      <button id="darkModeToggle">🌙</button>
     </div>
   </header>
 
-  <!-- Main Downloads Section -->
-  <main class="container mx-auto px-4 py-8">
-
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+  <!-- Main Section -->
+  <main>
+    <div class="subjects">
 
       <!-- MATHEMATICS -->
-      <article class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transition-transform transform hover:-translate-y-1">
-        <div class="flex items-center gap-3 mb-4">
-          <i class="fas fa-calculator fa-2x text-blue-600 dark:text-blue-400"></i>
-          <h2 class="text-xl font-semibold">Mathematics</h2>
+      <div class="card">
+        <i class="fas fa-calculator fa-2x"></i>
+        <h2>Mathematics</h2>
+        <div class="pdf-list">
+          <a href="MATHS/BCS301-IMP NOTES-PRP.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> BCS301-IMP NOTES-PRP</a>
+          <a href="MATHS/BCS301.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> BCS301</a>
+          <a href="MATHS/Jan-2024.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Jan-2024</a>
+          <a href="MATHS/mathematics-handbook-for-3rd-semester-22-sheme.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Handbook</a>
+          <a href="MATHS/model-qp-2.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Model QP 2</a>
+          <a href="MATHS/modelqp1.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Model QP 1</a>
         </div>
-        <div class="flex flex-col gap-2" id="mathematics">
-          <a href="MATHS/BCS301-IMP NOTES-PRP.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> BCS301-IMP NOTES-PRP</a>
-          <a href="MATHS/BCS301.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> BCS301</a>
-          <a href="MATHS/Jan-2024.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Jan-2024</a>
-          <a href="MATHS/mathematics-handbook-for-3rd-semester-22-sheme.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Handbook</a>
-          <a href="MATHS/model-qp-2.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Model QP 2</a>
-          <a href="MATHS/modelqp1.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Model QP 1</a>
-        </div>
-      </article>
+      </div>
 
       <!-- DATA STRUCTURES -->
-      <article class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transition-transform transform hover:-translate-y-1">
-        <div class="flex items-center gap-3 mb-4">
-          <i class="fas fa-database fa-2x text-green-600 dark:text-green-400"></i>
-          <h2 class="text-xl font-semibold">Data Structures</h2>
+      <div class="card">
+        <i class="fas fa-database fa-2x"></i>
+        <h2>Data Structures</h2>
+        <div class="pdf-list">
+          <a href="DATA-STRUCTURES/BCS304.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> BCS304</a>
+          <a href="DATA-STRUCTURES/Data Structures and Applications(BCS304) Dec 2023-Jan 2024.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> DS & Apps Dec-Jan</a>
+          <a href="DATA-STRUCTURES/Data Structures and Applications(BCS304) June - July 2024.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> DS & Apps June-July</a>
+          <a href="DATA-STRUCTURES/Jan-2024 (3).pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Jan-2024</a>
+          <a href="DATA-STRUCTURES/MODULE-2.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 2</a>
+          <a href="DATA-STRUCTURES/MODULE-5-PRIORITY-QUEUE-LEFTIST-TREE.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 5</a>
+          <a href="DATA-STRUCTURES/Model QP 2022 Scheme.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Model QP 2022</a>
         </div>
-        <div class="flex flex-col gap-2" id="data-structures">
-          <a href="DATA-STRUCTURES/BCS304.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> BCS304</a>
-          <a href="DATA-STRUCTURES/Data Structures and Applications(BCS304) Dec 2023-Jan 2024.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> DS & Apps Dec-Jan</a>
-          <a href="DATA-STRUCTURES/Data Structures and Applications(BCS304) June - July 2024.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> DS & Apps June-July</a>
-          <a href="DATA-STRUCTURES/Jan-2024 (3).pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Jan-2024</a>
-          <a href="DATA-STRUCTURES/MODULE-2.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Module 2</a>
-          <a href="DATA-STRUCTURES/MODULE-5-PRIORITY-QUEUE-LEFTIST-TREE.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Module 5</a>
-          <a href="DATA-STRUCTURES/Model QP 2022 Scheme.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Model QP 2022</a>
-        </div>
-      </article>
+      </div>
 
       <!-- JAVA -->
-      <article class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transition-transform transform hover:-translate-y-1">
-        <div class="flex items-center gap-3 mb-4">
-          <i class="fas fa-code fa-2x text-yellow-600 dark:text-yellow-400"></i>
-          <h2 class="text-xl font-semibold">Java</h2>
-        <div class="flex flex-col gap-2" id="java">
-  <a href="JAVA/BCS306A.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> BCS306A</a>
-  <a href="JAVA/Jan-2018.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Jan-2018</a>
-  <a href="JAVA/Jan-2024 (1).pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Jan-2024</a>
-  <a href="JAVA/Module-3_QB.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Module 3 QB</a>
-  <a href="JAVA/Module-4_OS.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Module 4 OS</a>
-  <a href="JAVA/Module-5_notes.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Module 5 Notes</a>
-  <a href="JAVA/Module_1_QB.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Module 1 QB</a>
-  <a href="JAVA/Module_2_QB.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Module 2 QB</a>
-  <a href="JAVA/Module_4_QB.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Module 4 QB</a>
-  <a href="JAVA/OOPS WITH JAVA BCS306A SOLVED MODEL QUESTION PAPER.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> OOPS Solved QP</a>
-  <a href="JAVA/hello-java-module-1.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Hello Java 1</a>
-  <a href="JAVA/hello-java-module-2.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Hello Java 2</a>
-  <a href="JAVA/hello-java-module-3&4.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Hello Java 3&4</a>
-  <a href="JAVA/hello-java-module-5.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Hello Java 5</a>
-  <a href="JAVA/java final.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Java Final</a>
-  <a href="JAVA/java module 2.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Java Module 2</a>
-  <a href="JAVA/java.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Java</a>
-  <a href="JAVA/javamodule 1.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Java Module 1</a>
-  <a href="JAVA/oops with java BCS306A.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> OOPS BCS306A</a>
+      <!-- JAVA -->
+<div class="card">
+  <i class="fas fa-code fa-2x"></i>
+  <h2>Java</h2>
+  <div class="pdf-list">
+    <a href="JAVA/BCS306A.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> BCS306A</a>
+    <a href="JAVA/Jan-2018.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Jan-2018</a>
+    <a href="JAVA/Jan-2024.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Jan-2024</a>
+    <a href="JAVA/Jan-2024(2).pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Jan-2024 (2)</a>
+    <a href="JAVA/Module-1_QB.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 1 QB</a>
+    <a href="JAVA/Module-2_QB.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 2 QB</a>
+    <a href="JAVA/Module-3_QB.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 3 QB</a>
+    <a href="JAVA/Module-4_QB.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 4 QB</a>
+    <a href="JAVA/Module-4_OS.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 4 OS</a>
+    <a href="JAVA/Module-5_Notes.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 5 Notes</a>
+    <a href="JAVA/OOPS_BCS306A.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> OOPS BCS306A</a>
+    <a href="JAVA/Hello_Java_1.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Hello Java 1</a>
+    <a href="JAVA/Hello_Java_2.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Hello Java 2</a>
+    <a href="JAVA/Hello_Java_3&4.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Hello Java 3&4</a>
+    <a href="JAVA/Hello_Java_5.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Hello Java 5</a>
+    <a href="JAVA/Java_Final.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Java Final</a>
+    <a href="JAVA/Java_Module-1.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Java Module 1</a>
+    <a href="JAVA/Java_Module-2.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Java Module 2</a>
+  </div>
 </div>
-      </article>
 
       <!-- OPERATING SYSTEMS -->
-      <article class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transition-transform transform hover:-translate-y-1">
-        <div class="flex items-center gap-3 mb-4">
-          <i class="fas fa-desktop fa-2x text-purple-600 dark:text-purple-400"></i>
-          <h2 class="text-xl font-semibold">Operating Systems</h2>
+      <div class="card">
+        <i class="fas fa-desktop fa-2x"></i>
+        <h2>Operating Systems</h2>
+        <div class="pdf-list">
+          <a href="OS/BCS302.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> BCS302</a>
+          <a href="OS/BCS303.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> BCS303</a>
+          <a href="OS/MODULE_3_NOTES.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 3 Notes</a>
+          <a href="OS/Module-4_OS.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Module 4 OS</a>
         </div>
-        <div class="flex flex-col gap-2" id="os">
-          <a href="OS/BCS302 SIMP 2025- by RVITM review team (1).pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> BCS302 SIMP 2025</a>
-          <a href="OS/BCS303.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> BCS303</a>
-          <a href="OS/MODULE_3_NOTES.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Module 3 Notes</a>
-          <a href="OS/Module-4_OS.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Module 4 OS</a>
-          <a href="OS/os-lab-prog.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> OS Lab Programs</a>
-          <!-- Add more OS PDFs as needed -->
-        </div>
-      </article>
+      </div>
 
       <!-- DDCO -->
-      <article class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md transition-transform transform hover:-translate-y-1">
-        <div class="flex items-center gap-3 mb-4">
-          <i class="fas fa-book fa-2x text-pink-600 dark:text-pink-400"></i>
-          <h2 class="text-xl font-semibold">DDCO</h2>
+      <div class="card">
+        <i class="fas fa-book fa-2x"></i>
+        <h2>DDCO</h2>
+        <div class="pdf-list">
+          <a href="DDCO/BCS302.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> BCS302</a>
+          <a href="DDCO/DDCO_JAN2024_Solutions.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> DDCO JAN2024 Solutions</a>
+          <a href="DDCO/ddco-complete-notes.pdf" download class="pdf-box"><i class="fas fa-file-pdf"></i> Complete Notes</a>
         </div>
-        <div class="flex flex-col gap-2" id="ddco">
-          <a href="DDCO/BCS302.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> BCS302</a>
-          <a href="DDCO/DDCO_JAN2024_Solutions.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> DDCO JAN2024 Solutions</a>
-          <a href="DDCO/ddco-complete-notes.pdf" download class="pdf-box flex items-center gap-2"><i class="fas fa-file-pdf text-red-500"></i> Complete Notes</a>
-          <!-- Add more DDCO PDFs here as needed -->
-        </div>
-      </article>
+      </div>
 
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 text-gray-600 dark:text-gray-400">
+  <footer>
     Made with ❤️ by Hammid Bin Aejaz
   </footer>
 
-  <!-- JS -->
   <script>
     // Dark Mode Toggle
     const darkModeBtn = document.getElementById('darkModeToggle');
@@ -172,38 +165,30 @@
       darkModeBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
     });
 
-    // Search Functionality
+    // Search functionality
     const searchInput = document.getElementById('searchInput');
     const pdfBoxes = document.querySelectorAll('.pdf-box');
     searchInput.addEventListener('input', () => {
       const filter = searchInput.value.toLowerCase();
       pdfBoxes.forEach(box => {
         const text = box.textContent.toLowerCase();
-        box.parentElement.style.display = text.includes(filter) ? 'block' : 'none';
+        box.parentElement.style.display = text.includes(filter) ? 'flex' : 'none';
       });
     });
 
-    // VanillaTilt effect
-    VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
-      max: 15,
-      speed: 400,
-      glare: true,
-      "max-glare": 0.3,
+    // Download confirmation popup
+    const pdfLinks = document.querySelectorAll('.pdf-box');
+    pdfLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const url = this.getAttribute('href');
+        const confirmed = confirm(`Do you want to download "${this.textContent.trim()}"?`);
+        if (confirmed) {
+          window.location.href = url;
+        }
+      });
     });
   </script>
-  <script>
-  const pdfLinks = document.querySelectorAll('.pdf-box'); // Select all PDF links
-  pdfLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
-      event.preventDefault(); // Stop immediate download
-      const url = this.getAttribute('href'); // Get the file URL
-      const confirmed = confirm(`Do you want to download "${this.textContent.trim()}"?`);
-      if (confirmed) {
-        window.location.href = url; // Start download if confirmed
-      }
-    });
-  });
-</script>
 
 </body>
 </html>
