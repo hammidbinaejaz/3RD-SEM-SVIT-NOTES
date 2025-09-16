@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Downloads – 3RD SEM SVIT NOTES</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Extra styling just for this page */
+    .downloads-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .downloads-container h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .file-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .file-item {
+      background:#fff;
+      padding:15px;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,.1);
+      transition:transform .2s;
+    }
+    .file-item:hover { transform:translateY(-4px); }
+    .file-item a {
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:#3498db;
+      font-weight:500;
+    }
+    body.dark-mode .file-item { background:#2c2c2c; }
+    body.dark-mode .file-item a { color:#90cdf4; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <h1>All Downloads</h1>
+      <p>Complete set of PDFs & resources</p>
+    </div>
+    <div class="header-actions">
+      <input type="text" id="searchInput" class="search-bar" placeholder="Search files…">
+      <button id="darkModeToggle">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="downloads-container">
+      <div class="file-list" id="fileList">
+        <!-- Each file link goes here -->
+        <div class="file-item pdf-box"><a href="pdfs/ADA_Notes.pdf" target="_blank">ADA Notes</a></div>
+        <div class="file-item pdf-box"><a href="pdfs/DBMS_Module1.pdf" target="_blank">DBMS Module 1</a></div>
+        <div class="file-item pdf-box"><a href="pdfs/DBMS_Module2.pdf" target="_blank">DBMS Module 2</a></div>
+        <div class="file-item pdf-box"><a href="pdfs/Java_Lab_Programs.pdf" target="_blank">Java Lab Programs</a></div>
+        <!-- Add more <div class="file-item pdf-box"><a href="path/to/file.pdf">Name</a></div> as needed -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by Hammid Bin Aejaz</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
