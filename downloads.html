@@ -4,9 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>All Downloads – 3RD SEM SVIT NOTES</title>
+  
+  <!-- Your CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome for PDF icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
   <style>
     /* Extra styling just for this page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
     .downloads-container {
       max-width: 900px;
       margin: 40px auto;
@@ -22,30 +35,71 @@
       gap: 20px;
     }
     .file-item {
-      background:#fff;
-      padding:15px;
-      border-radius:12px;
-      box-shadow:0 4px 10px rgba(0,0,0,.1);
-      transition:transform .2s;
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,.1);
+      transition: transform .2s;
     }
-    .file-item:hover { transform:translateY(-4px); }
+    .file-item:hover { transform: translateY(-4px); }
     .file-item a {
-      display:flex;
-      align-items:center;
-      gap:8px;
-      color:#3498db;
-      font-weight:500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #3498db;
+      font-weight: 500;
+      text-decoration: none;
     }
-    body.dark-mode .file-item { background:#2c2c2c; }
-    body.dark-mode .file-item a { color:#90cdf4; }
+    body.dark-mode {
+      background: #121212;
+      color: #e0e0e0;
+    }
+    body.dark-mode .file-item { background: #2c2c2c; }
+    body.dark-mode .file-item a { color: #90cdf4; }
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-actions {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .search-bar {
+      padding: 8px 12px;
+      width: 250px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .header-actions button {
+      padding: 8px 12px;
+      border: none;
+      background: #3498db;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .header-actions button:hover { background: #2980b9; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.8rem;
+      color: #666;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="hero">
-      <h1>All Downloads</h1>
-      <p>Complete set of PDFs & resources</p>
-    </div>
+    <h1>All Downloads</h1>
+    <p>Complete set of PDFs & resources</p>
     <div class="header-actions">
       <input type="text" id="searchInput" class="search-bar" placeholder="Search files…">
       <button id="darkModeToggle">🌙</button>
@@ -55,12 +109,12 @@
   <main>
     <section class="downloads-container">
       <div class="file-list" id="fileList">
-        <!-- Each file link goes here -->
-        <div class="file-item pdf-box"><a href="pdfs/ADA_Notes.pdf" target="_blank">ADA Notes</a></div>
-        <div class="file-item pdf-box"><a href="pdfs/DBMS_Module1.pdf" target="_blank">DBMS Module 1</a></div>
-        <div class="file-item pdf-box"><a href="pdfs/DBMS_Module2.pdf" target="_blank">DBMS Module 2</a></div>
-        <div class="file-item pdf-box"><a href="pdfs/Java_Lab_Programs.pdf" target="_blank">Java Lab Programs</a></div>
-        <!-- Add more <div class="file-item pdf-box"><a href="path/to/file.pdf">Name</a></div> as needed -->
+        <!-- Example PDF files -->
+        <div class="file-item pdf-box"><a href="pdfs/ADA_Notes.pdf" target="_blank"><i class="fas fa-file-pdf"></i> ADA Notes</a></div>
+        <div class="file-item pdf-box"><a href="pdfs/DBMS_Module1.pdf" target="_blank"><i class="fas fa-file-pdf"></i> DBMS Module 1</a></div>
+        <div class="file-item pdf-box"><a href="pdfs/DBMS_Module2.pdf" target="_blank"><i class="fas fa-file-pdf"></i> DBMS Module 2</a></div>
+        <div class="file-item pdf-box"><a href="pdfs/Java_Lab_Programs.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Java Lab Programs</a></div>
+        <!-- Add more files here as needed -->
       </div>
     </section>
   </main>
@@ -69,6 +123,27 @@
     <p>Made with ❤️ by Hammid Bin Aejaz</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- JavaScript -->
+  <script>
+    // ===== Dark Mode Toggle =====
+    const darkModeBtn = document.getElementById('darkModeToggle');
+    darkModeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      darkModeBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+
+    // ===== Search Functionality =====
+    const searchInput = document.getElementById('searchInput');
+    const pdfBoxes = document.querySelectorAll('.pdf-box');
+
+    searchInput.addEventListener('input', () => {
+      const filter = searchInput.value.toLowerCase().trim();
+      pdfBoxes.forEach(box => {
+        const text = box.textContent.toLowerCase();
+        box.style.display = text.includes(filter) ? 'inline-block' : 'none';
+      });
+    });
+  </script>
+
 </body>
 </html>
