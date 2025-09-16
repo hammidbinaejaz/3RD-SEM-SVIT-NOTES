@@ -18,3 +18,16 @@ searchInput.addEventListener('input', () => {
     box.style.display = text.includes(filter) ? 'inline-block' : 'none';
   });
 });
+
+// ===== Search Functionality =====
+const searchInput = document.getElementById('searchInput');
+const pdfBoxes = document.querySelectorAll('.pdf-box');
+
+searchInput.addEventListener('input', () => {
+  const filter = searchInput.value.toLowerCase();
+
+  pdfBoxes.forEach(box => {
+    const text = box.querySelector('a').textContent.toLowerCase();
+    box.style.display = text.includes(filter) ? 'inline-block' : 'none';
+  });
+});
