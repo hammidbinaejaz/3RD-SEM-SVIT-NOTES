@@ -5,7 +5,7 @@ darkModeBtn.addEventListener('click', () => {
   darkModeBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
 });
 
-// ===== Search & Highlight Matching Text =====
+// ===== Search & Highlight Functionality (Only PDF Name) =====
 const searchInput = document.getElementById('searchInput');
 const pdfBoxes = document.querySelectorAll('.pdf-box');
 
@@ -13,22 +13,24 @@ searchInput.addEventListener('input', () => {
   const filter = searchInput.value.toLowerCase();
 
   pdfBoxes.forEach(box => {
-    const text = box.textContent.toLowerCase();
+    const icon = box.querySelector('i'); // keep the icon intact
+    const textNode = Array.from(box.childNodes).find(node => node.nodeType === 3); // text node only
+    const text = textNode ? textNode.textContent.toLowerCase() : '';
 
     if (text.includes(filter) && filter !== '') {
-      // Show box
       box.style.display = 'flex';
 
-      // Highlight matched part
-      const originalText = box.textContent;
+      // Highlight matched part only in text node
       const regex = new RegExp(`(${filter})`, 'gi');
-      box.innerHTML = originalText.replace(regex, '<mark>$1</mark>');
+      textNode.nodeValue = ''; // clear original text
+      const highlightedText = textNode.textContent.replace(regex, match => `<mark>${match}</mark>`);
+
+      box.innerHTML = `${icon.outerHTML} ${textNode.textContent.replace(new RegExp(filter, 'gi'), match => `<mark>${match}</mark>`)}`;
     } else if (filter === '') {
-      // Show box and remove highlights
       box.style.display = 'flex';
-      box.innerHTML = box.textContent;
+      // Restore original text without highlights
+      box.innerHTML = `${icon.outerHTML} ${textNode.textContent}`;
     } else {
-      // Hide box
       box.style.display = 'none';
     }
   });
