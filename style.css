@@ -168,8 +168,12 @@ footer {
 
 /* ===== DARK MODE STYLES ===== */
 body.dark-mode {
-  background-color: #1e1e1e;
+  background-color: #111;      /* darker background */
   color: #eee;
+}
+
+body.dark-mode a {
+  color: #90cdf4;              /* light-blue links */
 }
 
 body.dark-mode .card {
