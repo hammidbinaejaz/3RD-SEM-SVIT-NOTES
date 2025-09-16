@@ -191,6 +191,19 @@
       "max-glare": 0.3,
     });
   </script>
+  <script>
+  const pdfLinks = document.querySelectorAll('.pdf-box'); // Select all PDF links
+  pdfLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // Stop immediate download
+      const url = this.getAttribute('href'); // Get the file URL
+      const confirmed = confirm(`Do you want to download "${this.textContent.trim()}"?`);
+      if (confirmed) {
+        window.location.href = url; // Start download if confirmed
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
