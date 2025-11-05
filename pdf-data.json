@@ -1,0 +1,422 @@
+{
+  "repository": "hammidbinaejaz/3RD-SEM-SVIT-NOTES",
+  "branch": "main",
+  "baseUrl": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main",
+  "lastUpdated": "2025-01-17",
+  "subjects": [
+    {
+      "id": "maths",
+      "title": "Mathematics",
+      "code": "BCS301",
+      "icon": "fa-calculator",
+      "category": "core",
+      "pdfs": [
+        {
+          "name": "BCS301 IMP NOTES [BEST]",
+          "path": "MATHS/BCS301-IMP NOTES-PRP.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/MATHS/BCS301-IMP%20NOTES-PRP.pdf",
+          "isBest": true
+        },
+        {
+          "name": "BCS301",
+          "path": "MATHS/BCS301.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/MATHS/BCS301.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Jan-2024",
+          "path": "MATHS/Jan-2024.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/MATHS/Jan-2024.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Handbook",
+          "path": "MATHS/mathematics-handbook-for-3rd-semester-22-sheme.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/MATHS/mathematics-handbook-for-3rd-semester-22-sheme.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Model QP 2",
+          "path": "MATHS/model-qp-2.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/MATHS/model-qp-2.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Model QP 1",
+          "path": "MATHS/modelqp1.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/MATHS/modelqp1.pdf",
+          "isBest": false
+        }
+      ]
+    },
+    {
+      "id": "ds",
+      "title": "Data Structures",
+      "code": "BCS304",
+      "icon": "fa-database",
+      "category": "core",
+      "pdfs": [
+        {
+          "name": "BCS304",
+          "path": "DATA-STRUCTURES/BCS304.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DATA-STRUCTURES/BCS304.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Data Structures and Applications (Dec 2023–Jan 2024)",
+          "path": "DATA-STRUCTURES/Data Structures and Applications(BCS304) Dec 2023-Jan 2024.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DATA-STRUCTURES/Data%20Structures%20and%20Applications(BCS304)%20Dec%202023-Jan%202024.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Data Structures and Applications (June–July 2024)",
+          "path": "DATA-STRUCTURES/Data Structures and Applications(BCS304) June - July 2024.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DATA-STRUCTURES/Data%20Structures%20and%20Applications(BCS304)%20June%20-%20July%202024.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Jan-2024",
+          "path": "DATA-STRUCTURES/Jan-2024 (3).pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DATA-STRUCTURES/Jan-2024%20(3).pdf",
+          "isBest": false
+        },
+        {
+          "name": "MODULE-2",
+          "path": "DATA-STRUCTURES/MODULE-2.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DATA-STRUCTURES/MODULE-2.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Model QP 2022 Scheme",
+          "path": "DATA-STRUCTURES/Model QP 2022 Scheme.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DATA-STRUCTURES/Model%20QP%202022%20Scheme.pdf",
+          "isBest": false
+        },
+        {
+          "name": "PADMA-REDDY - Graphs",
+          "path": "DATA-STRUCTURES/PADMA-REDDY-GRAPHS.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DATA-STRUCTURES/PADMA-REDDY-GRAPHS.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Data Structures book (Padma Reddy) [BEST]",
+          "path": "DATA-STRUCTURES/data-structures-book-by-padma-reddy.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DATA-STRUCTURES/data-structures-book-by-padma-reddy.pdf",
+          "isBest": true
+        },
+        {
+          "name": "DSA Lab Programs (1–12)",
+          "path": "DATA-STRUCTURES/dsa-lab-programs-(1-12).pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DATA-STRUCTURES/dsa-lab-programs-(1-12).pdf",
+          "isBest": false
+        },
+        {
+          "name": "DSA IA1 Lab Programs",
+          "path": "DATA-STRUCTURES/dsa-ia1-lab-programms.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DATA-STRUCTURES/dsa-ia1-lab-programms.pdf",
+          "isBest": false
+        },
+        {
+          "name": "MODULE-5 Priority Queue",
+          "path": "DATA-STRUCTURES/MODULE-5-PRIORITY-QUEUE-LEFTIST-TREE.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DATA-STRUCTURES/MODULE-5-PRIORITY-QUEUE-LEFTIST-TREE.pdf",
+          "isBest": false
+        },
+        {
+          "name": "QUESTION-BANK DS",
+          "path": "DATA-STRUCTURES/QUESTION-BANK DS.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DATA-STRUCTURES/QUESTION-BANK%20DS.pdf",
+          "isBest": false
+        }
+      ]
+    },
+    {
+      "id": "java",
+      "title": "JAVA",
+      "code": "BCS306A",
+      "icon": "fa-code",
+      "category": "core",
+      "pdfs": [
+        {
+          "name": "BCS306A",
+          "path": "JAVA/BCS306A.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/BCS306A.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Jan-2018",
+          "path": "JAVA/Jan-2018.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/Jan-2018.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Jan-2024 (1)",
+          "path": "JAVA/Jan-2024 (1).pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/Jan-2024%20(1).pdf",
+          "isBest": false
+        },
+        {
+          "name": "JAVA MODULE 1 [BEST]",
+          "path": "JAVA/hello-java-module-1.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/hello-java-module-1.pdf",
+          "isBest": true
+        },
+        {
+          "name": "JAVA MODULE 2 [BEST]",
+          "path": "JAVA/hello-java-module-2.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/hello-java-module-2.pdf",
+          "isBest": true
+        },
+        {
+          "name": "JAVA MODULE 3&4 [BEST]",
+          "path": "JAVA/hello-java-module-3&4.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/hello-java-module-3%264.pdf",
+          "isBest": true
+        },
+        {
+          "name": "JAVA MODULE 5 [BEST]",
+          "path": "JAVA/hello-java-module-5.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/hello-java-module-5.pdf",
+          "isBest": true
+        },
+        {
+          "name": "Java Final [lab]",
+          "path": "JAVA/java final.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/java%20final.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Java",
+          "path": "JAVA/java.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/java.pdf",
+          "isBest": false
+        },
+        {
+          "name": "OOPS BCS306A",
+          "path": "JAVA/oops with java BCS306A.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/oops%20with%20java%20BCS306A.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Jan-2024 (2)",
+          "path": "JAVA/Jan-2024 (2).pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/Jan-2024%20(2).pdf",
+          "isBest": false
+        },
+        {
+          "name": "Java Module 2",
+          "path": "JAVA/java module 2.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/java%20module%202.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Java Module 1",
+          "path": "JAVA/javamodule 1.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/javamodule%201.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Module 1 QB",
+          "path": "JAVA/Module_1_QB.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/Module_1_QB.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Module 2 QB",
+          "path": "JAVA/Module_2_QB.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/Module_2_QB.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Module 3 QB",
+          "path": "JAVA/MODULE_3_QB.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/MODULE_3_QB.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Module 4 QB",
+          "path": "JAVA/Module_4_QB.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/Module_4_QB.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Module 5 Notes",
+          "path": "JAVA/Module-5_notes.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/Module-5_notes.pdf",
+          "isBest": false
+        },
+        {
+          "name": "OOPS Solved Model QP",
+          "path": "JAVA/OOPS WITH JAVA BCS306A SOLVED MODEL QUESTION PAPER.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/OOPS%20WITH%20JAVA%20BCS306A%20SOLVED%20MODEL%20QUESTION%20PAPER.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Module-4 OS",
+          "path": "JAVA/Module-4_OS.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/JAVA/Module-4_OS.pdf",
+          "isBest": false
+        }
+      ]
+    },
+    {
+      "id": "os",
+      "title": "Operating Systems",
+      "code": "BCS302",
+      "icon": "fa-desktop",
+      "category": "core",
+      "pdfs": [
+        {
+          "name": "BCS303",
+          "path": "OS/BCS303.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/OS/BCS303.pdf",
+          "isBest": false
+        },
+        {
+          "name": "BCS302 SIMP 2025",
+          "path": "OS/BCS302 SIMP 2025- by RVITM review team (1).pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/OS/BCS302%20SIMP%202025-%20by%20RVITM%20review%20team%20(1).pdf",
+          "isBest": false
+        },
+        {
+          "name": "Jan-2024",
+          "path": "OS/Jan-2024 (2).pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/OS/Jan-2024%20(2).pdf",
+          "isBest": false
+        },
+        {
+          "name": "Best Q Bank OS [BEST]",
+          "path": "OS/best-q-bank-os.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/OS/best-q-bank-os.pdf",
+          "isBest": true
+        },
+        {
+          "name": "OS Lab Programs [lab]",
+          "path": "OS/os-lab-prog.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/OS/os-lab-prog.pdf",
+          "isBest": false
+        },
+        {
+          "name": "OS Lab Qs [LAB]",
+          "path": "OS/os-lab-q's.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/OS/os-lab-q's.pdf",
+          "isBest": false
+        },
+        {
+          "name": "OS Module 1",
+          "path": "OS/os-module-1.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/OS/os-module-1.pdf",
+          "isBest": false
+        },
+        {
+          "name": "OS Module 2",
+          "path": "OS/os-module-2.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/OS/os-module-2.pdf",
+          "isBest": false
+        },
+        {
+          "name": "OS Module 3",
+          "path": "OS/os-module-3.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/OS/os-module-3.pdf",
+          "isBest": false
+        },
+        {
+          "name": "OS Module 4",
+          "path": "OS/os-module-4.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/OS/os-module-4.pdf",
+          "isBest": false
+        },
+        {
+          "name": "OS Notes",
+          "path": "OS/os-nots\\.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/OS/os-nots%5C.pdf",
+          "isBest": false
+        },
+        {
+          "name": "MODULE 3 NOTES",
+          "path": "OS/MODULE_3_NOTES.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/OS/MODULE_3_NOTES.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Module-4 OS",
+          "path": "OS/Module-4_OS.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/OS/Module-4_OS.pdf",
+          "isBest": false
+        }
+      ]
+    },
+    {
+      "id": "ddco",
+      "title": "DDCO",
+      "code": "BCS302",
+      "icon": "fa-book",
+      "category": "core",
+      "pdfs": [
+        {
+          "name": "BCS302",
+          "path": "DDCO/BCS302.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DDCO/BCS302.pdf",
+          "isBest": false
+        },
+        {
+          "name": "BCS304 Important",
+          "path": "DDCO/BCS304 super important -22SCHEME (1) (1).pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DDCO/BCS304%20super%20important%20-22SCHEME%20(1)%20(1).pdf",
+          "isBest": false
+        },
+        {
+          "name": "DD&CO IA2",
+          "path": "DDCO/DD&CO-IA2.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DDCO/DD%26CO-IA2.pdf",
+          "isBest": false
+        },
+        {
+          "name": "DDCO JAN2024 Solutions",
+          "path": "DDCO/DDCO_JAN2024_Solutions.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DDCO/DDCO_JAN2024_Solutions.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Jan-2024",
+          "path": "DDCO/Jan-2024 (1).pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DDCO/Jan-2024%20(1).pdf",
+          "isBest": false
+        },
+        {
+          "name": "Modulewise QB",
+          "path": "DDCO/Modulewise QB-DDCO.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DDCO/Modulewise%20QB-DDCO.pdf",
+          "isBest": false
+        },
+        {
+          "name": "Complete Notes",
+          "path": "DDCO/ddco-complete-notes.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/DDCO/ddco-complete-notes.pdf",
+          "isBest": false
+        }
+      ]
+    },
+    {
+      "id": "scr",
+      "title": "SCR",
+      "code": "",
+      "icon": "fa-file-pdf",
+      "category": "core",
+      "pdfs": [
+        {
+          "name": "SCR Notes",
+          "path": "SCR.pdf",
+          "url": "https://raw.githubusercontent.com/hammidbinaejaz/3RD-SEM-SVIT-NOTES/main/SCR.pdf",
+          "isBest": false
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "totalSubjects": 6,
+    "totalPDFs": 59,
+    "bestPDFs": 7
+  }
+}
+
